@@ -8,7 +8,7 @@ import os
 
 # Konfigurasi Path
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-INPUT_PATH = os.path.join(BASE_DIR, '../data_raw/water_potability.csv')
+INPUT_PATH = os.path.join(BASE_DIR, 'raw_data/water_potability.csv')
 OUTPUT_DIR = os.path.join(BASE_DIR, 'water_potability_preprocessing')
 
 def load_data(path):

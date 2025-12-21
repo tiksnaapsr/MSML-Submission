@@ -30,12 +30,12 @@ jobs:
 
     # Menjalankan Script Automate 
     - name: Run Preprocessing Script
-      run: python preprocessing/automate_Tiksnapsr.py
+      run: python experiment/preprocessing/automate.py
 
     # Menyimpan hasil output sebagai 'Artifact'
     - name: Upload Processed Data
       uses: actions/upload-artifact@v4
       with:
         name: cleaned-dataset
-        path: preprocessing/water_potability_preprocessing/*.csv
+        path: experiment/preprocessing/water_potability_preprocessing/*.csv
         retention-days: 5
