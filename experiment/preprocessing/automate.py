@@ -9,7 +9,7 @@ import os
 # Konfigurasi Path
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 INPUT_PATH = os.path.join(BASE_DIR, 'raw_data/water_potability.csv')
-OUTPUT_DIR = os.path.join(BASE_DIR, 'water_potability_preprocessing')
+OUTPUT_DIR = os.path.join(BASE_DIR, 'water_potability_preprocessing_automated')
 
 def load_data(path):
     """
@@ -72,8 +72,8 @@ def main():
     # Simpan Hasil
     os.makedirs(OUTPUT_DIR, exist_ok=True) # Buat folder output jika belum ada
     
-    save_data(X_train_df, y_train, os.path.join(OUTPUT_DIR, 'train_clean.csv'))
-    save_data(X_test_df, y_test, os.path.join(OUTPUT_DIR, 'test_clean.csv'))
+    save_data(X_train_df, y_train, os.path.join(OUTPUT_DIR, 'train_clean_automated.csv'))
+    save_data(X_test_df, y_test, os.path.join(OUTPUT_DIR, 'test_clean_automated.csv'))
     
     print("--- PREPROCESSING SELESAI SUKSES ---")
 
