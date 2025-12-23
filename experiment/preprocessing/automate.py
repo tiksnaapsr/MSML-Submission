@@ -8,7 +8,7 @@ import os
 
 # Konfigurasi Path
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-INPUT_PATH = os.path.join(BASE_DIR, 'raw_data/water_potability.csv')
+INPUT_PATH = os.path.join(BASE_DIR, '../../raw_data/water_potability.csv')
 OUTPUT_DIR = os.path.join(BASE_DIR, 'water_potability_preprocessing_automated')
 
 def load_data(path):
@@ -18,7 +18,7 @@ def load_data(path):
     if not os.path.exists(path):
         raise FileNotFoundError(f"File dataset tidak ditemukan di: {path}")
     
-    print(f"✅ Memuat data dari: {path}")
+    print(f"Memuat data dari: {path}")
     return pd.read_csv(path)
 
 def save_data(X, y, output_path):
@@ -46,7 +46,7 @@ def main():
     y = df['Potability']
     
     # Split Data (Train & Test)
-    print("🔄 Membagi data menjadi Train (80%) dan Test (20%)...")
+    print("Membagi data menjadi Train (80%) dan Test (20%)...")
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.2, random_state=42, stratify=y
     )
